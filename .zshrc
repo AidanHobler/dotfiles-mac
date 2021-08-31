@@ -106,8 +106,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vim="nvim"
+alias oldvim="vim"
 
-# source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+# CD into my scripts folder for sling kings, open vim there, then return to the current working directory when the vim session ends 
+alias sling="export saved_wd=$(pwd) && cd '/Users/aidanhobler/Unity Projects/Sling Kings/Assets/Scripts' && export FrameworkPathOverride=/lib/mono/4.8-api && nvim Manager.cs && cd $saved_wd"
+
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 bindkey -v

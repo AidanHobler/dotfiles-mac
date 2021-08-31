@@ -79,7 +79,8 @@
 # Guidelines: 
 # Alt = Window
 # Command = Space
-# Control = Monitor
+# Control + Command = Monitor
+# Control = Reserved for Vim
 # Shift = Move/Modify
 
 # Applications
@@ -153,7 +154,7 @@ cmd - l : yabai -m space --focus next && (yabai -m query --windows --space | jq 
 # send window to desktop and follow focus
 # shift + cmd - z : yabai -m window --space next; yabai -m space --focus next
 
-# this is ugly and verbose, but unfortunately there isn't an easy way to create aliases
+# this is ugly and verbose, but unfortunately there isn't an easy way to create aliases (that I could find)
 
 shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1 && (yabai -m query --windows --space | jq -er 'map(select(.focused == 1)) | length > 0' || yabai -m window --focus mouse)
 shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2 && (yabai -m query --windows --space | jq -er 'map(select(.focused == 1)) | length > 0' || yabai -m window --focus mouse)
@@ -166,8 +167,8 @@ shift + cmd - 8 : yabai -m window --space 8; yabai -m space --focus 8 && (yabai 
 shift + cmd - 9 : yabai -m window --space 9; yabai -m space --focus 9 && (yabai -m query --windows --space | jq -er 'map(select(.focused == 1)) | length > 0' || yabai -m window --focus mouse)
 
 # focus monitor
-ctrl - h  : yabai -m display --focus prev
-ctrl - l  : yabai -m display --focus next
+ctrl + cmd - h  : yabai -m display --focus prev
+ctrl + cmd - l  : yabai -m display --focus next
 # ctrl + alt - 3  : yabai -m display --focus 3
 
 # send window to monitor and follow focus
