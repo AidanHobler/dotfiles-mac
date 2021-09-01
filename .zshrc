@@ -109,6 +109,7 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 alias oldvim="vim"
 
+alias sd="cd '/Users/aidanhobler/Unity Projects/Sling Kings'"
 # CD into my scripts folder for sling kings, open vim there, then return to the current working directory when the vim session ends 
 alias sling="export saved_wd=$(pwd) && cd '/Users/aidanhobler/Unity Projects/Sling Kings/Assets/Scripts' && export FrameworkPathOverride=/lib/mono/4.8-api && nvim Manager.cs && cd $saved_wd"
 
