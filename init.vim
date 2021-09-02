@@ -14,6 +14,7 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'hrsh7th/nvim-compe'
     Plug 'tree-sitter/tree-sitter'
     Plug 'justinmk/vim-sneak'
+    Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 " Everything after this line will be the config section
 
@@ -71,38 +72,37 @@ let g:compe.source.luasnip = v:true
 let g:compe.source.emoji = v:true
 
 " ****************************** Neorg ****************************** 
+"
 lua << EOF
-    require('neorg').setup {
-        -- Tell Neorg what modules to load
-        load = {
-            ["core.defaults"] = {}, -- Load all the default modules
-            ["core.norg.concealer"] = {}, -- Allows for use of icons
-            ["core.norg.dirman"] = { -- Manage your directories with Neorg
-                config = {
-                    workspaces = {
-                        my_workspace = "~/neorg"
-                    }
+--local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+--
+--parser_configs.norg = {
+--    install_info = {
+--        url = "https://github.com/vhyrro/tree-sitter-norg",
+--        files = { "src/parser.c" },
+--        branch = "main"
+--    },
+--}
+--
+--require('nvim-treesitter.configs').setup {
+--	ensure_installed = { "norg", "cpp", "c", "javascript"},
+--}
+
+require('neorg').setup {
+    -- Tell Neorg what modules to load
+    load = {
+        ["core.defaults"] = {}, -- Load all the default modules
+        ["core.norg.concealer"] = {}, -- Allows for use of icons
+        ["core.norg.dirman"] = { -- Manage your directories with Neorg
+            config = {
+                workspaces = {
+                    my_workspace = "~/neorg"
                 }
             }
-        },
-    }
+        }
+    },
+}
 EOF
-
-"lua << EOF
-"local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
-"
-"parser_configs.norg = {
-"    install_info = {
-"        url = "https://github.com/vhyrro/tree-sitter-norg",
-"        files = { "src/parser.c" },
-"        branch = "main"
-"    },
-"}
-"EOF
-"
-"require('nvim-treesitter.configs').setup {
-"	ensure_installed = {"norg"},
-"}
 
 " ****************************** NERDTree ****************************** 
 let g:NERDTreeShowHidden = 1 
