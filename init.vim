@@ -11,10 +11,10 @@ call plug#begin("~/.config/nvim/plugged")
     Plug 'dense-analysis/ale'
     Plug 'itchyny/lightline.vim'
     Plug 'vhyrro/neorg' | Plug 'nvim-lua/plenary.nvim'
-    Plug 'hrsh7th/nvim-compe'
-    Plug 'tree-sitter/tree-sitter'
+    " Plug 'hrsh7th/nvim-compe'
+    " Plug 'tree-sitter/tree-sitter'
     Plug 'justinmk/vim-sneak'
-    Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 " Everything after this line will be the config section
 
@@ -42,34 +42,34 @@ nnoremap <leader>b :buffers<CR>:buffer<Space>
 let g:sneak#label = 1
 
 " ****************************** Compe ****************************** 
-set completeopt=menuone,noselect
-
-let g:compe = {}
-let g:compe.enabled = v:true
-let g:compe.autocomplete = v:true
-let g:compe.debug = v:false
-let g:compe.min_length = 1
-let g:compe.preselect = 'enable'
-let g:compe.throttle_time = 80
-let g:compe.source_timeout = 200
-let g:compe.resolve_timeout = 800
-let g:compe.incomplete_delay = 400
-let g:compe.max_abbr_width = 100
-let g:compe.max_kind_width = 100
-let g:compe.max_menu_width = 100
-let g:compe.documentation = v:true
-
-let g:compe.source = {}
-let g:compe.source.path = v:true
-let g:compe.source.neorg = v:true
-let g:compe.source.buffer = v:true
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
-let g:compe.source.nvim_lua = v:true
-let g:compe.source.vsnip = v:true
-let g:compe.source.ultisnips = v:true
-let g:compe.source.luasnip = v:true
-let g:compe.source.emoji = v:true
+"set completeopt=menuone,noselect
+"
+"let g:compe = {}
+"let g:compe.enabled = v:true
+"let g:compe.autocomplete = v:true
+"let g:compe.debug = v:false
+"let g:compe.min_length = 1
+"let g:compe.preselect = 'enable'
+"let g:compe.throttle_time = 80
+"let g:compe.source_timeout = 200
+"let g:compe.resolve_timeout = 800
+"let g:compe.incomplete_delay = 400
+"let g:compe.max_abbr_width = 100
+"let g:compe.max_kind_width = 100
+"let g:compe.max_menu_width = 100
+"let g:compe.documentation = v:true
+"
+"let g:compe.source = {}
+"let g:compe.source.path = v:true
+"let g:compe.source.neorg = v:true
+"let g:compe.source.buffer = v:true
+"let g:compe.source.calc = v:true
+"let g:compe.source.nvim_lsp = v:true
+"let g:compe.source.nvim_lua = v:true
+"let g:compe.source.vsnip = v:true
+"let g:compe.source.ultisnips = v:true
+"let g:compe.source.luasnip = v:true
+"let g:compe.source.emoji = v:true
 
 " ****************************** Neorg ****************************** 
 "
