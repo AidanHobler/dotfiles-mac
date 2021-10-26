@@ -114,6 +114,8 @@ alias sd="cd '/Users/aidanhobler/Unity Projects/Sling Kings'"
 alias sling="export saved_wd=$(pwd) && cd '/Users/aidanhobler/Unity Projects/Sling Kings/Assets/Scripts' && export FrameworkPathOverride=/lib/mono/4.8-api && nvim Manager.cs && cd $saved_wd"
 
 alias playsk="open -a '/Users/aidanhobler/Unity Projects/Sling Kings/Sling Kings.app'"
+
+alias jaro="ssh -Y manjaro"
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 bindkey -v
@@ -136,3 +138,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# opam configuration
+[[ ! -r /Users/aidanhobler/.opam/opam-init/init.zsh ]] || source /Users/aidanhobler/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
